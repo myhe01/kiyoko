@@ -45,14 +45,14 @@ def parse_launch_data(x):
 def print_next_launch(list):
     print("Date: " + list[1].strftime("%B %d, %Y"))
     if list[0]:
-        print("Time: " + list[1].strftime("%X"))
+        print("Time: " + list[1].strftime("%-I:%M %p"))
     print("Mission: " + str(list[2]))
     print("Vehicle: " + str(list[3]))
     print("Pad: " + str(list[4]))
     print("")
 
 def update_display(inky_display, list):
-    time = list[1].strftime("%X")
+    time = list[1].strftime("%-I:%M %p")
     date = list[1].strftime("%B %d, %Y")
     mission = str(list[2])
     vehicle = str(list[3])
